@@ -5,8 +5,12 @@
   "main": "index.js",
   "module": "main.js",
   "scripts": {
+    "fix": "eslint --fix .",
+    "lint": "eslint .",
+    "precommit": "npm run lint",
     "doc": "documentation readme main.js -f md --section=Documentation",
-    "start": "DEBUG=my* nodemon index.js",
+    "local": "DEBUG=my* DEBUG_ERRORS=true nodemon index.js",
+    "start": " node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "apidoc": "node -r esm document.js && redoc-cli bundle swagger.json --cdn true --title 'My backend server'"
   },

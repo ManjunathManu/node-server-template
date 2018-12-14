@@ -23,6 +23,7 @@ app.use((req, res, next) => {
 });
 
 app.use((error, req, res, next) => {
+  // logger.log()('abc', logger);
   logger.debug(req.id)(error);
   if (res.headersSent) return;
   const {

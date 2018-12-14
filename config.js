@@ -19,6 +19,10 @@ const CONFIG = {
       handleExceptions: true,
       shouldConsole: isTrue(process.env.DEBUG_LOG_CONSOLE),
     },
+    consoleLog: {
+      level: 'info',
+      shouldConsole: true,
+    },
   },
   SWAGGER_JSON: './swagger.json',
   DEBUG_ERRORS: isTrue(process.env.DEBUG_ERRORS),
