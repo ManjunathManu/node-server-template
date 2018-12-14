@@ -18,5 +18,6 @@ module.exports = {
       'devDependencies': true
     }],
     'import/prefer-default-export': [0],
+    'newline-per-chained-call':0,
   }
 };
