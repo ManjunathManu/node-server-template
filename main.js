@@ -1,9 +1,6 @@
 import createError from 'http-errors';
-// import debug from 'debug';
 import {
-  // eslint-disable-next-line import/named
   createServer,
-  // eslint-disable-next-line import/named
   httpServer,
 } from './common-utils';
 
@@ -11,16 +8,10 @@ import CONFIG from './config';
 import logger from './logger';
 import router from './controller';
 
-const a = require('debug')('aaaa');
-
-a('sfgagagwr');
-// console.log(a);
-
 const app = createServer({
   stream: logger.access,
 });
 
-a('sss');
 app.use(router);
 
 app.use((req, res, next) => {
