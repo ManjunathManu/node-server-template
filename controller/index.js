@@ -8,6 +8,11 @@ import {
   reqValidation,
 } from './validationCatcher';
 import {
+  authenticateRequest,
+} from '../middlewares/authenticateRequest';
+
+
+import {
   home,
 } from './home';
 import {
@@ -22,7 +27,7 @@ const router = new Router();
 
 router.get('/', rEH(home));
 
-router.get('/documentation', rEH(apiDocumentation));
+router.get('/documentation', authenticateRequest, rEH(apiDocumentation));
 
 router.post('/login', preLogin, reqValidation, rEH(login));
 
