@@ -2,6 +2,9 @@ import {
   Router,
 } from '../common-utils/express-utils';
 import {
+  reqErrorHandle as rEH,
+} from '../common-utils/utils';
+import {
   home,
 } from './home';
 import {
@@ -10,8 +13,8 @@ import {
 
 const router = new Router();
 
-router.get('/', home);
+router.get('/', rEH(home));
 
-router.get('/documentation', apiDocumentation);
+router.get('/documentation', rEH(apiDocumentation));
 
 export default router;

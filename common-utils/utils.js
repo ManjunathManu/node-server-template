@@ -3,7 +3,7 @@
  * @param {function} [func] - The request handler without try catches.
  * @returns {function} - Promise that takes care of errors
  * @example
- * import { reqErrorHandle as rEH } from 'lm-commons';
+ * import { reqErrorHandle as rEH } from 'common-utils';
  *
  * const testHandler = async (req, res, next) => {
  *   const {
@@ -25,7 +25,7 @@ export const reqErrorHandle = func => (req, res, next) => {
  * @param {Promise} [promise] - A normal promise which differentiates between resolve and reject .
  * @returns {Promise} - Promise that always resolves
  * @example
- * import { errorFirst as eF } from 'lm-commons';
+ * import { errorFirst as eF } from 'common-utils';
  *
  * const isGreaterThan10 = (input) => {
  *   const integerValue = parseInt(input, 10);
